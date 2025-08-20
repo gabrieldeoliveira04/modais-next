@@ -55,7 +55,7 @@ export const BiometricModal: React.FC<BiometricModalProps> = ({
   };
 
   // depois do primeiro sucesso → vai para confirmar dedo
-  const handleNextAfterSuccess = () => {
+  const handledefaultAfterSuccess = () => {
     setStep("confirm");
   };
 
@@ -144,13 +144,13 @@ export const BiometricModal: React.FC<BiometricModalProps> = ({
             />
 
             <div className="flex w-full justify-end gap-2">
-              <Button variant="cancel" onClick={onClose}>
+              <Button variant="destructive" onClick={onClose}>
                 <XCircle className="mr-1" />
                 Cancelar
               </Button>
 
               <Button
-                variant="next"
+                variant="default"
                 onClick={handleStartScanning}
                 disabled={!selectedFinger || isLoading}
               >
@@ -199,12 +199,12 @@ export const BiometricModal: React.FC<BiometricModalProps> = ({
             </div>
 
             <div className="flex w-full justify-end gap-2 mt-4">
-              <Button variant="cancel" onClick={onClose}>
+              <Button variant="destructive" onClick={onClose}>
                 <XCircle className="mr-1" />
                 Cancelar
               </Button>
               <Button
-                variant="next"
+                variant="default"
                 disabled
                 className="opacity-70 cursor-not-allowed"
               >
@@ -224,7 +224,7 @@ export const BiometricModal: React.FC<BiometricModalProps> = ({
               className="mx-auto w-30 m-6"
             />
             <div className="flex justify-end gap-2">
-              <Button variant="next" onClick={handleNextAfterSuccess}>
+              <Button variant="default" onClick={handledefaultAfterSuccess}>
                 Avançar
                 <ArrowRightCircle className="ml-1" />
               </Button>
@@ -241,11 +241,11 @@ export const BiometricModal: React.FC<BiometricModalProps> = ({
               className="mx-auto w-30 m-6"
             />
             <div className="flex justify-end gap-2">
-              <Button variant="cancel" onClick={onClose}>
+              <Button variant="destructive" onClick={onClose}>
                 <XCircle className="mr-1" />
                 Cancelar
               </Button>
-              <Button variant="next" onClick={handleConfirmScanning}>
+              <Button variant="default" onClick={handleConfirmScanning}>
                 Avançar
                 <ArrowRightCircle className="ml-1" />
               </Button>
@@ -282,12 +282,12 @@ export const BiometricModal: React.FC<BiometricModalProps> = ({
             </div>
 
             <div className="flex w-full justify-end gap-2 mt-4">
-              <Button variant="cancel" onClick={onClose}>
+              <Button variant="destructive" onClick={onClose}>
                 <XCircle className="mr-1" />
                 Cancelar
               </Button>
               <Button
-                variant="next"
+                variant="default"
                 disabled
                 className="opacity-70 cursor-not-allowed"
               >
@@ -307,10 +307,10 @@ export const BiometricModal: React.FC<BiometricModalProps> = ({
               className="mx-auto w-30 m-6"
             />
             <div className="flex justify-end gap-2">
-              <Button variant="cancel" onClick={() => setStep("select")}>
+              <Button variant="destructive" onClick={() => setStep("select")}>
                 Cadastrar outra digital
               </Button>
-              <Button variant="next" onClick={onClose}>
+              <Button variant="default" onClick={onClose}>
                 Salvar
               </Button>
             </div>
@@ -332,11 +332,11 @@ export const BiometricModal: React.FC<BiometricModalProps> = ({
             />
 
             <div className="flex justify-end gap-2">
-              <Button variant="cancel" onClick={onClose}>
+              <Button variant="destructive" onClick={onClose}>
                 <XCircle className="mr-1" />
                 Fechar
               </Button>
-              <Button variant="next" onClick={handleRetry}>
+              <Button variant="default" onClick={handleRetry}>
                 Tentar novamente
               </Button>
             </div>
